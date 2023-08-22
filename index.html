@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+
+    // output random between rps
+
+    // create constant array of rps
+    const result = ['rock', 'paper', 'scissors'];    
+
+    function getComputerChoice() {
+        
+        let lengthOfArray = result.length;
+        let i = Math.floor(Math.random() * lengthOfArray);
+        return result[i];
+    }
+
+
+    console.log(getComputerChoice());
+
+</script>
+
+<body>
+    <h1>check console</h1>
+</body>
+</html>
