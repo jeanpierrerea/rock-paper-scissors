@@ -27,12 +27,28 @@
         let lowerPlayerSelection = playerSelection.toLowerCase(); 
         
 
+        if (lowerPlayerSelection == computerSelection) {
+            return `Draw! ${lowerPlayerSelection}${computerSelection}`; 
+        }
+        
+        if ((lowerPlayerSelection == 'rock') && (computerSelection == 'paper')) {
+            return `You lost! ${computerSelection} beats ${lowerPlayerSelection}`; 
+        }
+        
+        if ((lowerPlayerSelection == 'paper') && (computerSelection == 'scissors')) {
+            return `You lost! ${computerSelection} beats ${lowerPlayerSelection}`; 
+        }  
+
+        if ((lowerPlayerSelection == 'scissors') && (computerSelection == 'rock')) {
+            return `You lost! ${computerSelection} beats ${lowerPlayerSelection}`; 
+        }  
+
         //if (playerSelection == computerSelection) {
         return `You lost${lowerPlayerSelection}${computerSelection}`;
         //}
     }
 
-    const playerSelection = "rOCk";
+    const playerSelection = "paper";
     const computerSelection = getComputerChoice();
     console.log(playerSelection);
     console.log(computerSelection);
