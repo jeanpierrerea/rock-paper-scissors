@@ -65,12 +65,18 @@
         let results = [];
         let winner;
 
-
+        // five round loop
         for (let i = 0; i < 5; i++) {
+
+            // prompts player input
             let playerInput = prompt("RPS? ");
+            computerSelection = getComputerChoice();
             let roundResult = playRound(playerInput,computerSelection);
-            console.log(win);
+
+            // add the result to an array 
             results.push(roundResult);
+
+            // determine if you won based on counter for W, L, D
             if (win > loss + draw) {
                 winner = true; 
             } else {
@@ -80,30 +86,16 @@
         }
 
         if (winner) {
-            console.log(results);
-            return `You have won ${win} rounds! You are the winner!`;
+            return `You have won ${win} rounds! You are the winner!` + "\nRound by round array: " + results;
         } else {
-            console.log(results);
-            return `You have lost ${loss} rounds!`;
+            return `You have did not win, you won ${win} rounds. Lost ${loss} rounds and drew ${draw}` + "\nRound by round array: " + results;
         }
     }
 
-    // const playerSelection = "ROCK";
-    const computerSelection = getComputerChoice();
-    // console.log(playerSelection);
-    // console.log(computerSelection);
-
-    //console.log(playRound(playerSelection, computerSelection));
 
     console.log(game());
-    // console.log(win);
-    // console.log(loss);
-    // console.log(draw);
 
     
-
-
-
 </script>
 
 <body>
